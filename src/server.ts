@@ -1,10 +1,14 @@
 import Fastify, { FastifyReply, FastifyRequest } from 'fastify'
 import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
+import fastifySwagger from '@fastify/swagger'
+import fastifySwaggerUi from '@fastify/swagger-ui'
+import { version } from '../package.json'
 
 import { userRoutes } from './routes/user.routes'
 
 import {
+  jsonSchemaTransform,
   serializerCompiler,
   validatorCompiler
 } from 'fastify-type-provider-zod'
@@ -45,6 +49,31 @@ async function bootstrap() {
     }
 
     reply.code(toSend.statusCode).send(toSend)
+  })
+
+  // Swagger docs, JWT not working properly
+  server.register(fastifySwagger, {
+    openapi: {
+      info: {
+        title: 'Moments Blog API',
+        description: 'Uma API REST simples de blog',
+        version
+      },
+      components: {
+        securitySchemes: {
+          bearerAuth: {
+            type: 'http',
+            scheme: 'bearer',
+            bearerFormat: 'JWT'
+          }
+        }
+      }
+    },
+    transform: jsonSchemaTransform
+  })
+
+  server.register(fastifySwaggerUi, {
+    routePrefix: '/documentation'
   })
 
   await server.register(userRoutes, { prefix: '/users' })
