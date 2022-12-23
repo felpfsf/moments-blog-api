@@ -31,6 +31,7 @@ export async function userRoutes(server: FastifyInstance) {
     schema: {
       params: userPathParams
     },
+    onRequest: [authenticate],
     handler: deleteUserController
   })
 
