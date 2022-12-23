@@ -44,8 +44,24 @@ A API que criei possui os seguintes endpoints:
 
 Esses são os principais endpoints da API que criei. Eles foram projetados para fornecer uma ampla gama de funcionalidades para gerenciar usuários, incluindo criar, listar, atualizar e apagar usuários. Além disso, a API também inclui uma rota de login para permitir que os usuários façam login e recebam um token JWT válido para acessar os endpoints protegidos por autenticação.
 
+Adicionei a biblioteca Swagger para documentar melhor as funcionalidades da API, é possível acessar através do endpoint /documentation porém não é possível testar os endpoints que necessitam de autenticação.
+
 No geral, o desenvolvimento deste projeto foi uma experiência bastante enriquecedora. Além de me permitir aprender sobre o desenvolvimento de API REST com Node.js e sobre as melhores práticas de desenvolvimento de software, o projeto também me permitiu aplicar os conhecimentos adquiridos em uma situação real e criar uma API funcional.
 
 A utilização de ferramentas como o Fastify, o Zod, o JWT e o Prisma também foi muito útil para garantir que a API fosse desenvolvida de maneira rápida, segura e escalável. Isso me permitiu me concentrar no desenvolvimento das funcionalidades em vez de me preocupar com questões de baixo nível, o que foi muito valioso.
 
 No final, fiquei muito satisfeito com o resultado final e acredito que foi uma experiência muito enriquecedora que me ajudou a crescer como desenvolvedor.
+
+## Autor
+
+<div align='left'>
+
+ <img style="border:4px solid orange; border-radius: 100%; padding:1px;" src="https://github.com/felpfsf.png" width="100px;" alt=""/>
+ <br />
+ <sub><b>Felipe F.</b></sub>
+
+Made by Felipe F. 👋🏽 Keep in touch!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Felipe-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felipefsf/)](https://www.linkedin.com/in/felipefsf/)
+
+</div>
