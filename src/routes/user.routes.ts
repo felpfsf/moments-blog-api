@@ -20,7 +20,7 @@ export async function userRoutes(server: FastifyInstance) {
     method: 'POST',
     url: '/register',
     schema: {
-      body: userSchema,
+      body: userSchema
     },
     handler: registerUserController
   })
@@ -39,7 +39,7 @@ export async function userRoutes(server: FastifyInstance) {
     method: 'POST',
     url: '/login',
     schema: {
-      body: loginSchema
+      body: loginSchema,
     },
     handler: loginController
   })
@@ -67,6 +67,9 @@ export async function userRoutes(server: FastifyInstance) {
   server.withTypeProvider<ZodTypeProvider>().route({
     method: 'GET',
     url: '/',
+    // schema: {
+    //   security: { bearerAuth: [] }
+    // },
     onRequest: [authenticate],
     handler: getUsersController
   })
