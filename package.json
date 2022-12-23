@@ -1,0 +1,23 @@
+{
+  "name": "moments-blog-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "prisma": "^4.8.0",
+    "tsx": "^3.12.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@fastify/jwt": "^6.5.0",
+    "@prisma/client": "^4.8.0",
+    "fastify": "^4.10.2",
+    "fastify-type-provider-zod": "^1.1.8",
+    "zod": "^3.20.2"
+  }
+}
