@@ -8,7 +8,6 @@ import {
   serializerCompiler,
   validatorCompiler
 } from 'fastify-type-provider-zod'
-import { ZodError } from 'zod'
 
 const port = (process.env.PORT as unknown as number) || 3333
 
