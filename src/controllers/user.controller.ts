@@ -87,7 +87,11 @@ export async function loginController(
 
   if (correctPassword) {
     const { password, salt, ...rest } = user
-    return { accessToken: server.jwt.sign(rest) }
+    const accessToken = server.jwt.sign(rest, { expiresIn: 7, sub: user.id })
+    return reply.status(200).send({
+      accessToken
+    })
+    
   }
 
   return reply.status(401).send({
