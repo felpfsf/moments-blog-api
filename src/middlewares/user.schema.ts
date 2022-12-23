@@ -1,11 +1,12 @@
 import { z } from 'zod'
 
 const userCoreSchema = {
-  name: z.string().min(3, 'Nome é obrigatório'),
+  name: z.string().min(3, 'Nome é obrigatório').describe('Descrição de nome'),
   email: z
     .string()
     .min(1, 'E-mail é obrigatório')
     .email('Informe um email válido')
+    .describe('descrição de email')
 }
 
 export const userSchema = z
